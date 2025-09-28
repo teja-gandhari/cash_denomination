@@ -13,6 +13,9 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   // List of available note denominations in descending order
   final List<int> notes = [500, 200, 100, 50, 20, 10, 5, 2, 1];
+  //date
+  DateTime now = DateTime.now();
+  String dateOnly= "${DateTime.now().year}-${DateTime.now().month}-${DateTime.now().day}";
 
   // Controllers to handle input for each denomination
   late List<TextEditingController> controllers;
@@ -109,6 +112,11 @@ class _HomepageState extends State<Homepage> {
             child: Column(
               children: [
                 //
+                Text(dateOnly,style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),),
                 Text(
                   "In words:",
                   style: TextStyle(
