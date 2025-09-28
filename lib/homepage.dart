@@ -33,12 +33,15 @@ class _HomepageState extends State<Homepage> {
   Future<void>loadData()async{
     final prefs = await SharedPreferences.getInstance();
 
+    // Load counts
     List<String>? savedCount = prefs.getStringList('notes_count');
     if(savedCount != null){
       for(int i = 0; i < controllers.length; i++){
         controllers[i].text = savedCount[i];
       }
     }
+    // Load converted text
+    _convertedText = prefs.getString('converted_text') ?? 'Zero Rupees';
     setState(() {});
   }
 
@@ -77,6 +80,7 @@ class _HomepageState extends State<Homepage> {
     final total = calculateTotal();
     setState(() {
       _convertedText = NumberToTextConverter.convertToIndianText(total);
+      saveData();
     });
   }
 
