@@ -84,8 +84,10 @@ class _HomepageState extends State<Homepage> {
   void clearAll() {
     for (var controller in controllers) {
       controller.clear();
+
     }
     _convertToWords(); // Update the text after clearing
+    saveData();
   }
 
   @override
