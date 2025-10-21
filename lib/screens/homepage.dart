@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'appbar.dart';
-import 'conveter.dart';
+import 'widgets/appbar.dart';
+import '../utils/conveter.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -13,9 +13,9 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   // List of available note denominations in descending order
   final List<int> notes = [500, 200, 100, 50, 20, 10, 5, 2, 1];
-  //date
-  DateTime now = DateTime.now();
-  String dateOnly= "${DateTime.now().year}-${DateTime.now().month}-${DateTime.now().day}";
+//date
+  static DateTime now = DateTime.now();
+  static String dateOnly= "${DateTime.now().year}-${DateTime.now().month}-${DateTime.now().day}";
 
   // Controllers to handle input for each denomination
   late List<TextEditingController> controllers;
@@ -100,7 +100,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildCustomAppBar(context, clearAll),
+      appBar: buildCustomAppBar(context, clearAll, dateOnly),
       backgroundColor: Colors.grey[100],
       body: Column(
         children: [
@@ -112,11 +112,6 @@ class _HomepageState extends State<Homepage> {
             child: Column(
               children: [
                 //
-                Text(dateOnly,style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),),
                 Text(
                   "In words:",
                   style: TextStyle(

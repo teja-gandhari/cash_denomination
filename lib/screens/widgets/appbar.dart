@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-AppBar buildCustomAppBar(context, onClearNotes) {
+AppBar buildCustomAppBar(context, onClearNotes, String dateOnly) {
   return AppBar(
-    backgroundColor: Colors.blue[100],
-    title: const Text(
-      'Cash Denomination',
-      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
-    ),
+    backgroundColor: Colors.blue[100], // Example background color
+    title: Text(dateOnly,style: const TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+      color: Colors.black,
+    ),),
     actions: [
       Padding(
         padding: const EdgeInsets.only(right: 12),
@@ -58,5 +59,6 @@ AppBar buildCustomAppBar(context, onClearNotes) {
       ),
 
     ],
+
   );
 }
