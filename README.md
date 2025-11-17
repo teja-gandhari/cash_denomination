@@ -16,9 +16,9 @@ IDE: Android Studio
 
 📸 Screenshots
 HomePage
-<img width="1080" height="2400" alt="homw1" src="https://github.com/user-attachments/assets/f8c65f80-7492-48f8-97c2-0f221d13ebfd" />
-<img width="1080" height="2400" alt="home2" src="https://github.com/user-attachments/assets/956e44ad-caf6-4012-b636-4ad0141bb3f8" />
-<img width="1080" height="2400" alt="home" src="https://github.com/user-attachments/assets/33bdbace-a760-4a47-bff6-8fef16871ab4" />
+<img width="300" height="600" alt="homw1" src="https://github.com/user-attachments/assets/f8c65f80-7492-48f8-97c2-0f221d13ebfd" />
+<img width="300" height="600" alt="home2" src="https://github.com/user-attachments/assets/956e44ad-caf6-4012-b636-4ad0141bb3f8" />
+<img width="300" height="600" alt="home" src="https://github.com/user-attachments/assets/33bdbace-a760-4a47-bff6-8fef16871ab4" />
 
 
 ▶️ How to Run This Project
